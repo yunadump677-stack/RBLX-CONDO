@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox Condo Games</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        /* --- GLOBAL STYLES --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
+            background-size: cover;
+            color: #4a0028;
+            padding-top: 70px; /* Space for navbar */
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* --- NAVIGATION BAR --- */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 182, 193, 0.95);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+
+        nav h1 {
+            font-size: 24px;
+            color: #ff4fa3;
+            font-weight: 800;
+        }
+
+        nav .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav .nav-links a {
+            color: #fff;
+            font-weight: 600;
+            padding: 8px 12px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        nav .nav-links a:hover {
+            background: #ff7bbf;
+            color: #fff;
+        }
+
+        /* --- MAIN CONTENT --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Animated Glowing Title */
+        .page-title {
+            text-align: center;
+            color: #ff4fa3;
+            margin-bottom: 40px;
+            font-size: 48px;
+            font-weight: 800;
+            animation: glow 2s infinite ease-in-out;
+        }
+
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 5px #ff8acb, 0 0 10px #ff8acb, 0 0 15px #ff5ca8;
+            }
+            50% {
+                text-shadow: 0 0 10px #ff58b7, 0 0 20px #ff58b7, 0 0 30px #ff2fa1, 0 0 40px #ff2fa1;
+            }
+            100% {
+                text-shadow: 0 0 5px #ff8acb, 0 0 10px #ff8acb, 0 0 15px #ff5ca8;
+            }
+        }
+
+        /* --- CARDS --- */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: rgba(255, 227, 241, 0.95);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(255, 105, 180, 0.3);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(255, 105, 180, 0.5);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 15px;
+        }
+
+        .card h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #ff4fa3;
+        }
+
+        .card p {
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        /* Glowing Buttons */
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #ff7bbf;
+            color: #fff;
+            border-radius: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 0 12px #ff7bcf;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #ff97cf;
+            box-shadow: 0 0 15px #ff6fc4, 0 0 25px #ff6fc4, 0 0 35px #ff6fc4;
+            transform: translateY(-2px);
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                padding: 10px 20px;
+            }
+
+            nav .nav-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .page-title {
+                font-size: 36px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card h2 {
+                font-size: 20px;
+            }
+
+            .card p {
+                font-size: 14px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <h1>🎀 Roblox Condo Games</h1>
+        <div class="nav-links">
+            <a href="#cozy">Cozy Pink Condo</a>
+            <a href="#dream">Dream Hangout Condo</a>
+            <a href="#magic">Magical Pink Rooms</a>
+            <a onclick="openLink('https://discord.gg/gQKxRTZvR')">Discord</a>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <div class="container">
+        <h1 class="page-title">🎀 Roblox Condo Games 🎀</h1>
+
+        <div class="cards">
+            <!-- CARD 1 -->
+            <div class="card" id="cozy">
+                <h2>💗 Cozy Pink Condo</h2>
+                <p>Aesthetic pink condo perfect for decorating and hanging out.</p>
+                <img src="https://cdn.static.pikoya.com/robloxgo/games/8771606918/thumbnail_1" alt="Pink Color">
+                <a class="btn" onclick="openGame('https://roblox.com.ge/games/102168567330694/Character-Talk?privateServerLinkCode=29972505977501992551393227828929')">Play Game</a>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="card" id="dream">
+                <h2>💞 Dream Hangout Condo</h2>
+                <p>Hang out with friends in a cute dream-style condo.</p>
+                <img src="https://i.ytimg.com/vi/jlk_tk0sAmE/hqdefault.jpg" alt="Hangout">
+                <a class="btn" onclick="openGame('https://roblox.com.ge/games/90908715811812/Find-the-Neko-Girl-Join-for-a-surprise?privateServerLinkCode=29972505977501992551393227828929')">Play Game</a>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="card" id="magic">
+                <h2>✨ Magical Pink Rooms</h2>
+                <p>Explore magical rooms and cozy corners filled with pink vibes.</p>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx7J-Zwt4wiY5aGJgF0FJwkU_4N1l-kI447yXOHU97gQeREEvgsUm5DqN5&s=10" alt="Magic room">
+                <a class="btn" onclick="openGame('https://roblox.com.ge/games/13831863192/Neko-Infection-GUBBY-NEKO?privateServerLinkCode=29972505977501992551393227828929')">Play Game</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openGame(url) {
+            window.open(url, "_blank");
+        }
+
+        function openLink(url) {
+            window.open(url, "_blank");
+        }
+    </script>
+
+</body>
+</html>
